@@ -1,0 +1,301 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "Represents a user's public profile.",
+      "type": "object",
+      "properties": {
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string", "format": "uri" },
+        "age": { "type": "number", "description": "The age of the user." },
+        "primaryGoal": {
+            "type": "string",
+            "description": "The user's primary fitness goal.",
+            "enum": ["weight-loss", "muscle-gain", "general-fitness", "endurance"]
+        },
+        "xp": { "type": "number", "description": "Experience points earned by the user." },
+        "unlockedBadges": {
+          "type": "array",
+          "description": "A list of IDs for achievements the user has unlocked.",
+          "items": { "type": "string" }
+        },
+        "joinedGroups": {
+            "type": "array",
+            "description": "A list of group IDs the user has joined.",
+            "items": { "type": "string" }
+        },
+        "joinedChallenges": {
+          "type": "array",
+          "description": "A list of challenge IDs the user has joined.",
+          "items": { "type": "string" }
+        },
+        "lastDailyChallengeDate": {
+          "type": "string",
+          "format": "date",
+          "description": "The date the user last completed a daily challenge (YYYY-MM-DD)."
+        },
+        "streak": {
+          "type": "number",
+          "description": "Current workout streak in days."
+        },
+        "lastWorkoutDate": {
+          "type": "string",
+          "format": "date",
+          "description": "The date the user last logged a workout (YYYY-MM-DD)."
+        },
+        "totalCaloriesThisMonth": {
+            "type": "number",
+            "description": "Total calories burned this month."
+        },
+        "totalWorkoutsThisMonth": {
+            "type": "number",
+            "description": "Total workouts logged this month."
+        },
+        "lastActivityMonth": {
+            "type": "string",
+            "description": "The last month a workout was logged (YYYY-MM)."
+        },
+        "totalCaloriesThisWeek": {
+            "type": "number",
+            "description": "Total calories burned this week."
+        },
+        "totalWorkoutsThisWeek": {
+            "type": "number",
+            "description": "Total workouts logged this week."
+        },
+        "lastActivityWeek": {
+            "type": "string",
+            "description": "The last week a workout was logged (YYYY-WW)."
+        },
+        "cumulativePushups": {
+            "type": "number",
+            "description": "Total cumulative pushups completed."
+        },
+        "postCount": {
+            "type": "number",
+            "description": "Total number of community posts created by the user."
+        },
+        "isMentor": {
+            "type": "boolean",
+            "description": "Indicates if the user is available as a mentor."
+        },
+        "specialties": {
+            "type": "array",
+            "description": "A list of the mentor's specialties (e.g., Nutrition, Strength).",
+            "items": { "type": "string" }
+        },
+        "mentorId": {
+            "type": "string",
+            "description": "The ID of the user's current mentor."
+        },
+        "menteeIds": {
+            "type": "array",
+            "description": "A list of user IDs that this mentor is currently mentoring.",
+            "items": { "type": "string" }
+        },
+        "stepsToday": {
+          "type": "number",
+          "description": "Total steps taken today, synced from a health platform."
+        },
+        "hoursSlept": {
+            "type": "number",
+            "description": "Hours slept last night, synced from a health platform."
+        },
+        "dailyCalorieIntake": {
+            "type": "number",
+            "description": "Total calories consumed today, synced from a nutrition app."
+        },
+        "dailyProtein": {
+            "type": "number",
+            "description": "Total protein in grams consumed today, synced from a nutrition app."
+        },
+        "dailyCarbs": {
+            "type": "number",
+            "description": "Total carbohydrates in grams consumed today, synced from a nutrition app."
+        },
+        "dailyFats": {
+            "type": "number",
+            "description": "Total fat in grams consumed today, synced from a nutrition app."
+        }
+      }
+    },
+    "WorkoutLog": {
+      "title": "Workout Log",
+      "description": "Represents a single completed workout session by a user.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "description": "The ID of the user who logged the workout." },
+        "date": { "type": "string", "format": "date-time", "description": "The date and time the workout was completed." },
+        "workoutTitle": { "type": "string", "description": "The title of the workout." },
+        "duration": { "type": "number", "description": "Duration of the workout in minutes." },
+        "calories": { "type": "number", "description": "Calories burned during the workout." },
+        "exercises": {
+          "type": "array",
+          "description": "A list of specific exercises performed during the workout.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Name of the exercise."
+              },
+              "sets": {
+                "type": "number",
+                "description": "Number of sets."
+              },
+              "reps": {
+                "type": "number",
+                "description": "Number of repetitions per set."
+              },
+              "weight": {
+                "type": "number",
+                "description": "Weight used in kg."
+              }
+            },
+            "required": ["name", "sets", "reps"]
+          }
+        },
+        "difficultyRating": {
+          "type": "string",
+          "description": "User's perceived difficulty of the workout.",
+          "enum": ["easy", "moderate", "hard"]
+        }
+      },
+      "required": ["userId", "date", "workoutTitle", "duration"]
+    },
+    "Post": {
+      "title": "Community Post",
+      "description": "A single post in the community feed.",
+      "type": "object",
+      "properties": {
+        "authorId": { "type": "string" },
+        "authorName": { "type": "string" },
+        "authorPhotoURL": { "type": "string", "format": "uri" },
+        "content": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "likeCount": { "type": "number" },
+        "commentCount": { "type": "number" },
+        "likedBy": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "List of user IDs who liked the post."
+        },
+        "category": {
+          "type": "string",
+          "description": "The category of the community post.",
+          "enum": ["General", "Nutrition", "Cardio", "Strength", "Recovery"]
+        }
+      },
+      "required": ["authorId", "authorName", "content", "createdAt", "category"]
+    },
+    "Comment": {
+      "title": "Post Comment",
+      "description": "A single comment on a community post.",
+      "type": "object",
+      "properties": {
+        "authorId": { "type": "string" },
+        "authorName": { "type": "string" },
+        "authorPhotoURL": { "type": "string", "format": "uri" },
+        "content": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["authorId", "authorName", "content", "createdAt"]
+    },
+    "Group": {
+      "title": "Workout Group",
+      "description": "A user-created group for workouts and community.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "memberCount": { "type": "number" }
+      },
+      "required": ["name", "description", "memberCount"]
+    },
+    "Challenge": {
+      "title": "Challenge",
+      "description": "Represents a community or peer-to-peer challenge.",
+      "type": "object",
+      "properties": {
+        "authorId": { "type": "string", "description": "The ID of the user who created the challenge. Null for official community challenges." },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "type": { "type": "string", "enum": ["time-bound", "performance-based"] },
+        "goalValue": { "type": "number", "description": "The target value for the challenge goal." },
+        "goalUnit": { "type": "string", "description": "The unit for the challenge goal (e.g., 'workouts', 'calories', 'steps')." },
+        "participantCount": { "type": "number", "description": "The number of users participating in the challenge." },
+        "participants": {
+          "type": "array",
+          "description": "A list of user IDs participating in the challenge.",
+          "items": { "type": "string" }
+        },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "endDate": { "type": "string", "format": "date-time", "description": "The end date for time-bound challenges." }
+      },
+      "required": ["title", "description", "type", "goalValue", "goalUnit"]
+    },
+    "GroupWorkoutSession": {
+      "title": "Group Workout Session",
+      "description": "A real-time, shared workout session.",
+      "type": "object",
+      "properties": {
+        "hostId": { "type": "string", "description": "The user ID of the session host." },
+        "hostName": { "type": "string" },
+        "hostPhotoURL": { "type": "string", "format": "uri" },
+        "workoutSlug": { "type": "string", "description": "The slug of the workout being performed." },
+        "workoutTitle": { "type": "string" },
+        "startTime": { "type": "string", "format": "date-time" },
+        "participants": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "userId": { "type": "string" },
+              "displayName": { "type": "string" },
+              "photoURL": { "type": "string", "format": "uri" }
+            },
+            "required": ["userId", "displayName"]
+          }
+        },
+        "status": {
+          "type": "string",
+          "enum": ["active", "completed"]
+        }
+      },
+      "required": ["hostId", "hostName", "workoutSlug", "workoutTitle", "startTime", "participants", "status"]
+    }
+  },
+  "auth": {
+    "providers": []
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/backend/entities/UserProfile" },
+      "description": "Stores user profile information."
+    },
+    "/users/{userId}/workoutLogs/{logId}": {
+      "schema": { "$ref": "#/backend/entities/WorkoutLog" },
+      "description": "Stores individual workout logs for each user."
+    },
+    "/posts/{postId}": {
+      "schema": { "$ref": "#/backend/entities/Post" },
+      "description": "Stores all community posts."
+    },
+    "/posts/{postId}/comments/{commentId}": {
+      "schema": { "$ref": "#/backend/entities/Comment" },
+      "description": "Stores all comments for a single post."
+    },
+    "/groups/{groupId}": {
+      "schema": { "$ref": "#/backend/entities/Group" },
+      "description": "Stores all workout groups."
+    },
+    "/challenges/{challengeId}": {
+      "schema": { "$ref": "#/backend/entities/Challenge" },
+      "description": "Stores all community and peer challenges."
+    },
+    "/groupWorkoutSessions/{sessionId}": {
+      "schema": { "$ref": "#/backend/entities/GroupWorkoutSession" },
+      "description": "Stores active and completed group workout sessions."
+    }
+  }
+}
