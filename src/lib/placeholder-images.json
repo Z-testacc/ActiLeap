@@ -1,0 +1,132 @@
+{
+  "placeholderImages": [
+    {
+      "id": "user-avatar",
+      "description": "User avatar",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njk3Nzc4NjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait",
+      "width": 100,
+      "height": 100
+    },
+    {
+      "id": "strength-workout",
+      "description": "A person doing a strength workout",
+      "imageUrl": "https://images.unsplash.com/photo-1516208685347-1db8b6b227dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzdHJlbmd0aCUyMHdvcmtvdXR8ZW58MHx8fHwxNzY5ODg1MjI1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "strength workout",
+      "width": 1200,
+      "height": 600
+    },
+    {
+      "id": "cardio-workout",
+      "description": "A person doing a cardio workout",
+      "imageUrl": "https://images.unsplash.com/photo-1584952449180-f8fddc0b03a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjYXJkaW8lMjB3b3Jrb3V0fGVufDB8fHx8MTc2OTg4NTIyNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cardio workout",
+      "width": 1200,
+      "height": 600
+    },
+    {
+      "id": "yoga-workout",
+      "description": "A person doing yoga",
+      "imageUrl": "https://images.unsplash.com/photo-1599447292180-45fd84092ef0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx5b2dhJTIwcG9zZXxlbnwwfHx8fDE3Njk4ODUyMjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "yoga pose",
+      "width": 1200,
+      "height": 600
+    },
+    {
+      "id": "hiit-workout",
+      "description": "A person doing a HIIT workout",
+      "imageUrl": "https://images.unsplash.com/photo-1666979289446-6e9ebb257091?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpbnRlbnNlJTIwd29ya291dHxlbnwwfHx8fDE3Njk4ODUyMjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "intense workout",
+      "width": 1200,
+      "height": 600
+    },
+    {
+      "id": "stretching-workout",
+      "description": "A person stretching",
+      "imageUrl": "https://images.unsplash.com/photo-1485727749690-d091e8284ef3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdHJldGNoaW5nJTIwZXhlcmNpc2V8ZW58MHx8fHwxNzY5ODg1MjI1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "stretching exercise",
+      "width": 1200,
+      "height": 600
+    },
+    {
+      "id": "rehab-workout",
+      "description": "A person doing a rehabilitation exercise",
+      "imageUrl": "https://images.unsplash.com/photo-1540205895360-4ad4cffb3aa8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyZWhhYmlsaXRhdGlvbiUyMGV4ZXJjaXNlfGVufDB8fHx8MTc2OTg2MjIwNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rehabilitation exercise",
+      "width": 1200,
+      "height": 600
+    },
+    {
+      "id": "resistance-workout",
+      "description": "A person working out with resistance bands",
+      "imageUrl": "https://images.unsplash.com/photo-1517130038641-a774d04afb3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxyZXNpc3RhbmNlJTIwYmFuZHxlbnwwfHx8fDE3Njk3OTA2MjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "resistance band",
+      "width": 1200,
+      "height": 600
+    },
+    {
+      "id": "squat-animation",
+      "description": "A person squatting",
+      "imageUrl": "https://images.unsplash.com/photo-1769693225852-fe8ac902fbb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzcXVhdCUyMGV4ZXJjaXNlfGVufDB8fHx8MTc2OTc2OTg5M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "squat exercise",
+      "width": 400,
+      "height": 250
+    },
+    {
+      "id": "pushup-animation",
+      "description": "A person doing a pushup",
+      "imageUrl": "https://images.unsplash.com/photo-1516258454449-64fed1caa732?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwdXNodXAlMjBleGVyY2lzZXxlbnwwfHx8fDE3Njk4Mzc1ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pushup exercise",
+      "width": 400,
+      "height": 250
+    },
+    {
+      "id": "plank-animation",
+      "description": "A person holding a plank",
+      "imageUrl": "https://images.unsplash.com/photo-1606170750739-460f27c2d30d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwbGFuayUyMGV4ZXJjaXNlfGVufDB8fHx8MTc2OTg0Mzc4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "plank exercise",
+      "width": 400,
+      "height": 250
+    },
+    {
+      "id": "burpee-animation",
+      "description": "A person doing a burpee",
+      "imageUrl": "https://picsum.photos/seed/burpee-animation/400/250",
+      "imageHint": "burpee exercise",
+      "width": 400,
+      "height": 250
+    },
+    {
+      "id": "jumpingjack-animation",
+      "description": "A person doing jumping jacks",
+      "imageUrl": "https://images.unsplash.com/photo-1562609291-a27621d3f4a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8anVtcGluZyUyMGphY2tzfGVufDB8fHx8MTc2OTc5MzkxNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "jumping jacks",
+      "width": 400,
+      "height": 250
+    },
+    {
+      "id": "cardio-animation",
+      "description": "A person performing a cardio exercise",
+      "imageUrl": "https://images.unsplash.com/photo-1579854602908-ce7e7c29f4fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjYXJkaW8lMjBleGVyY2lzZXxlbnwwfHx8fDE3Njk4ODUyMjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cardio exercise",
+      "width": 400,
+      "height": 250
+    },
+    {
+      "id": "yoga-animation",
+      "description": "A person in a yoga pose",
+      "imageUrl": "https://images.unsplash.com/photo-1758599881247-b7a28d9297e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx5b2dhJTIwYW5pbWF0aW9ufGVufDB8fHx8MTc2OTg4NTIyNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "yoga animation",
+      "width": 400,
+      "height": 250
+    },
+    {
+      "id": "generic-animation",
+      "description": "A generic exercise animation",
+      "imageUrl": "https://images.unsplash.com/photo-1743265614902-e9313146a113?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxleGVyY2lzZSUyMGFuaW1hdGlvbnxlbnwwfHx8fDE3Njk4ODUyMjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "exercise animation",
+      "width": 400,
+      "height": 250
+    }
+  ]
+}
